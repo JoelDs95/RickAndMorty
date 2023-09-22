@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2023/08/Rick-vs.-Rick-Prime_-Music-Video-_-Rick-and-Morty-_-adult-swim-1-21-screenshot.jpg);
+  color: white;
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* height: 140vh; */
 }
 
 code {

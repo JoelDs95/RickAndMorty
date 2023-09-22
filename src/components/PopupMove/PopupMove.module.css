@@ -1,0 +1,37 @@
+.popup {
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 100; /* Asegúrate de que el Popup sea visible encima de otros elementos */
+    transition: transform 0.2s ease-in-out; 
+  }
+  
+  .popupHeader {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .closeButton {
+    color: #ff0000; /* Cambia el color del botón de cierre según tu preferencia */
+  }
+  
+  .popupContent {
+    padding: 10px;
+  }
+  .dragging {
+    cursor: grab; /* Cambia el cursor al estilo "agarre" mientras se arrastra */
+  }
+  
+  /* Agrega estilos adicionales según tus necesidades */

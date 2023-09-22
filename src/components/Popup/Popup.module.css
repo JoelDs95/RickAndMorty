@@ -1,0 +1,115 @@
+.popup {
+  margin: 5px;;
+  width: 350px;
+  height: 50vh;
+  border: 4px solid #065b94a8;
+  background-color: rgba(13, 71, 109, 0.452);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-end-end-radius: 15%;
+  border-end-start-radius: 15%;
+  
+}
+.popupHeader {
+  background-color: #0b1635cb;
+  border-bottom: 1px solid #cccccc2c;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #f51b1b;
+}
+
+.closeButton:hover {
+  color: #f00;
+}
+
+.minimizeButton,
+.maximizeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #da2626;
+  margin-right: 8px;
+}
+
+
+.name {
+  font-size: 34px;
+  font-weight: bold;
+  color: #203a23; /* Color fluorescente (puedes ajustar el color) */
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #3ddf4b, 0 0 15px #3ddf4b; /* Sombra de texto */
+  transition: text-shadow 0.3s ease-in-out; /* Animación de sombra de texto */
+  font-family: 'Roboto', sans-serif; 
+  margin-right: 10px;
+  max-width: 20ch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.status {
+  font-size: 25px;
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #225827, 0 0 15px #1d7224;
+  text-align: left;
+}
+
+.species {
+  font-size: 25px;
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #225827, 0 0 15px #1d7224;
+  text-align: left;
+}
+
+.gender {
+  font-size: 25px;
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #225827, 0 0 15px #1d7224;
+  text-align: left;
+}
+
+.origin {
+  font-size: 25px;
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #225827, 0 0 15px #1d7224;
+  text-align: left;
+  /* max-width: 12ch; */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  
+}
+
+@keyframes typing-animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.popupContent {
+  padding: 16px;
+
+}
+
+.typing {
+  animation: typing-animation 2s steps(40, end) forwards;
+  overflow: hidden;
+  
+  white-space: nowrap;
+  /* border-right: 4px solid #259735; */
+}

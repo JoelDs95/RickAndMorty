@@ -1,0 +1,111 @@
+
+.card {
+  margin: 5x;
+  border-radius: 10px;
+  padding: 30px;
+  color: #000000;
+  position: relative;
+  transition: transform 0.3s ease, margin 0.4s ease;
+  z-index: 1;
+  /* background-image: url(https://realtimevfx.com/uploads/default/original/2X/9/9ec795306ce4c382f785537845c3c798aba60d07.gif); */
+  background-image: url('/home/joel/Escritorio/rick_and_morty/src/components/petro-kosariekov-portal-gun-ri-unscreen (1).gif');
+  background-repeat: no-repeat;
+  background-size: auto 74%; /* Ancho automático y altura fija al 74% */
+  background-position: 45%;
+  background-position-y: 25%;
+  /* animation: rotar 5s linear infinite; */
+  /* flex-wrap: wrap; */
+  /* height: 30vh; */
+  /* -webkit-border-radius:50%; */
+  /* box-shadow: 0px 0px 15px 15px; */
+  /* -webkit-box-shadow: 0px 0px 15px 15px; */
+  
+}
+.cardInvisible {
+  margin: 170px; /* Define el nuevo margen cuando la tarjeta no es visible */
+  transition: margin 0.3s ease;
+}
+
+.closeButton {
+  background-color: #ff0000;
+  color: #000000;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+  /* position: absolute; */
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card.active {
+  transform: scale(0.95); /* Reducir la escala al 95% */
+}
+
+.name {
+  font-size: 34px;
+  font-weight: bold;
+  color: #203a23; /* Color fluorescente (puedes ajustar el color) */
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #3ddf4b, 0 0 15px #3ddf4b; /* Sombra de texto */
+  transition: text-shadow 0.3s ease-in-out; /* Animación de sombra de texto */
+  font-family: 'Roboto', sans-serif; 
+  margin-right: 10px;
+  max-width: 20ch;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.name:hover {
+  text-shadow: none; /* Elimina la sombra de texto al pasar el mouse por encima */
+}
+
+.card-transition {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.divContainer {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+
+.image {
+  max-width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 150px;
+  border: 1px solid #c7ee8000;
+  opacity: 0.92;
+  user-select: none;
+  pointer-events: none;
+  /* animation: rotar 5s linear infinite; */
+  /* image-rendering: #ec2525; */
+
+}
+
+/* Define la animación llamada "fadeIn" */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotar{
+  from{
+    transform: rotateY(182deg);
+  }
+  to{
+    transform: rotateY(-180deg);
+  }
+}
+
+.card-enter {
+  animation: fadeIn 0.5s ease-in-out; /* Aplica la animación "fadeIn" durante 0.5 segundos */
+}

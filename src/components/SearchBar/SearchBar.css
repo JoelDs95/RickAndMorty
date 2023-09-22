@@ -1,0 +1,43 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 20px;
+}
+
+/* Estilos para el input */
+.search-bar input {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilos para el placeholder del input */
+.search-bar input::placeholder {
+  color: #aaa;
+}
+
+/* Estilos para el input cuando está enfocado */
+.search-bar input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+/* Estilos para el Boton de Agregar */
+.add-button {
+  background-color: #7fcaf5; 
+  color: rgb(7, 5, 5); 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease;
+
+}
+
+/* Estilos para el botón cuando se pasa el cursor sobre él */
+.add-button:hover {
+  background-color: #0056b3; /* Color de fondo azul más oscuro */
+}
