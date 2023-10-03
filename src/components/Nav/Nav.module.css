@@ -1,38 +1,79 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 1000;
   }
+
+.addButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration:none;
+  margin-left: 10px;
+  font-size: 30px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+}
+.addButton:hover {
+  /* background-color: #555; */
+  /* Agrega una línea debajo cuando el cursor está encima */
+  border-bottom: 2px solid #63b421;
+}
+
+button.homeButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.3s;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif; /* Empuja el botón Home hacia la izquierda */
+  /* margin-left: 10px; */
+
+}
+button.homeButton:hover {
+  /* Agrega una línea debajo cuando el cursor está encima */
+  border-bottom: 2px solid #63b421;
+}
+
+/* Style for Home and About buttons */
+button {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 30px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
   
-  .add-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .add-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Style for Home and About buttons */
-  button {
-    background-color: transparent;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    text-decoration: none;
-    margin-left: 10px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
+}
+button:hover {
+  /* Agrega una línea debajo cuando el cursor está encima */
+  border-bottom: 2px solid #63b421;
+}
+
+
+.logoImage {
+  width: 400px;
+  height: 150px;
+  margin-block-start: -30px;
+  position: left !important;
+  /* margin-bottom:  500; */
+}

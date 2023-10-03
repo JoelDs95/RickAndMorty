@@ -1,37 +1,53 @@
 .popup {
-    position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 100; /* Asegúrate de que el Popup sea visible encima de otros elementos */
-    transition: transform 0.2s ease-in-out; 
-  }
-  
-  .popupHeader {
-    background-color: #f0f0f0;
-    padding: 5px;
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .controls button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-right: 5px;
-  }
-  
-  .closeButton {
-    color: #ff0000; /* Cambia el color del botón de cierre según tu preferencia */
-  }
-  
-  .popupContent {
-    padding: 10px;
-  }
-  .dragging {
-    cursor: grab; /* Cambia el cursor al estilo "agarre" mientras se arrastra */
-  }
-  
-  /* Agrega estilos adicionales según tus necesidades */
+  position: absolute;
+  background-color: rgba(20, 81, 150, 0.5);
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 0; /* Reducir el espacio interior para que la barra superior ocupe espacio */
+  z-index: 100;
+  transition: transform 0.2s ease-in-out;
+  width: 400px; /* Ajustar el ancho del popup según tus necesidades */
+  height: 490px;
+  border-radius: 5px; /* Agregar bordes redondeados al popup */
+}
+
+.popupHeader {
+  background-color: #1f2347cb; /* Color de fondo para la barra superior */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 5px; /* Esquina superior izquierda redondeada */
+  border-top-right-radius: 5px; /* Esquina superior derecha redondeada */
+}
+
+.controls button {
+  background-color: transparent;
+  border: 2px;
+  cursor: pointer;
+  color: #fff; /* Color de los botones */
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.closeButton:hover {
+  background-color: #ff0000; /* Cambiar el color al pasar el mouse */
+}
+
+.popupContent {
+  padding: 10px;
+  font-size: 30px; /* Ajusta el tamaño de fuente según tus preferencias */
+  font-weight: bold;
+  color: #203a23; /* Color de fuente fluorescente */
+  text-shadow: 0 0 5px #3ddf4b, 0 0 10px #3ddf4b, 0 0 15px #3ddf4b; /* Sombra de texto */
+  font-family: 'Roboto', sans-serif; /* Estilo de fuente */
+  max-width: 100%; /* Evitar que el texto supere el ancho del popup */
+  overflow-wrap: break-word; /* Dividir el texto en líneas cuando sea necesario */
+  word-wrap: break-word; /* Dividir el texto en palabras cuando sea necesario */
+  hyphens: auto; /* Permitir separación de sílabas */
+  text-align: left; /* Alineación del texto en el centro */
+}
+
+
+.dragging {
+  cursor: grab;
+}

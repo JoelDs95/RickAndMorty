@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "./PopupMove.module.css";
+import styles from '../PopupMove/PopupMove.module.css';
 import { useDrag } from "react-dnd";
 
 
@@ -56,10 +56,10 @@ export default function PopupMove(props) {
       </div>
       <div className={styles.popupContent}>
         <h2 className={styles.name}>{content.name}</h2>
-        <p className={styles.popupContent}>Estado: {content.status}</p>
-        <p className={styles.popupContent}>Especie: {content.species}</p>
-        <p className={styles.popupContent}>Género: {content.gender}</p>
-        <p className={styles.popupContent}>Origen: {content.origin.name}</p>
+        <p>Estado: {content.status}</p>
+        <p>Especie: {content.species}</p>
+        <p>Género: {content.gender}</p>
+        <p>Origen: {content.origin.name}</p>
       </div>
     </div>
   ) : null;

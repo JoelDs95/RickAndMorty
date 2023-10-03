@@ -6,8 +6,8 @@ export default function Cards(props) {
   const { characters, onClose } = props;
 
   return (
+    
     <div className={styledCards.cardsContainer}>
-      {/* <h2>Todos los personajes</h2> */}
       <div className={styledCards.cards}>
         {characters.map((item) => (
           <Card

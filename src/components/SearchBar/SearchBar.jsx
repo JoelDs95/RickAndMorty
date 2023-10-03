@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import "./SearchBar.css";
-
+import styles from "./SearchBar.module.css";
+import { MdPersonAddAlt1 } from "react-icons/md";
 export default function SearchBar({ onSearch }) {
   const [id, setId] = useState(''); // Estado para almacenar el valor del input
-  // const [inputValue, setInputValue] = useState("");
-  
+  const [isInputFocused, setIsInputFocused] = useState(false);
 
   const handleInputChange = (event) => {
-    setId(event.target.value); // Actualiza el estado con el valor del input
+    setId(event.target.value)
   };
-
 
   const handleAddtChange = () => {
     if (id.trim() !== "") {
@@ -17,23 +15,33 @@ export default function SearchBar({ onSearch }) {
       setId("");
     }
   };
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleAddtChange(); // Llama a la función de manejo al presionar Enter.
+    }
+  };
 
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
 
-  // const handleAddClick = () => {
-  //   // Ejecuta la función onSearch pasándole el valor actual
-  //   props.onSearch(inputValue);
-  // };
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
 
   return (
-    <div className="search-bar">
+    <div className={styles.container}>
       <input
-        type="text"
-        placeholder="Agregar personaje..."
+        type="number"
+        placeholder={isInputFocused ? "" : "Agregar ID"}
         value={id}
         onChange={handleInputChange}
+        onKeyPress={handleKeyPress} 
+        onFocus={handleInputFocus}
+        onBlur={handleInputBlur}
       />
-      <button className="add-button" onClick={handleAddtChange}>
-        Agregar
+      <button className={styles.btn} onClick={handleAddtChange}>
+      <MdPersonAddAlt1 style={{ color: '#f5f5f5', transform: 'rotate(-360deg)', width: '35px', }}/>
       </button>
     </div>
   );

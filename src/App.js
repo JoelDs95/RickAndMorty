@@ -6,13 +6,20 @@ import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About.jsx";
 import Details from "./components/Details/Details.jsx";
+import Form from "./components/Form/Form";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 //import Card from "./components/Card.jsx";
+
+const access = {
+  userName: 'prueba@example.com',
+  password: '123456',
+}
 
 function App() {
   const [characters, setCharacters] = useState([])
+  const location = useLocation()
 
   // const char = characters
   const onSearch = async (id) => {
@@ -43,17 +50,22 @@ function App() {
     // Actualiza el estado con los personajes actualizados
     setCharacters(updatedCharacters);
   }
+  const login = (data) => {
+    console.log(data);
+  }
+
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="App">
-        <Nav onSearch={onSearch} characters={characters} />
+      
+        {location.pathname !== "/" && <Nav onSearch={onSearch} characters={characters} />}
         {/* <Cards characters={characters} onClose={onClose} /> */}
         <Routes >
-          <Route path='/' element={<Cards characters={characters} onClose={onClose} />} />
+          <Route path='/' element={<Form />} />
+          <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
           <Route path='/about' element={<About />} />
           <Route path='/details/:id' element={<Details />} />
         </Routes>
-      </div>
+      
     </DndProvider >
   );
 }

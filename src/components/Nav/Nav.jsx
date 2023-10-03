@@ -1,7 +1,10 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
-
+import styles from "../Nav/Nav.module.css";
+import { FaTachometerAlt } from "react-icons/fa";
+import { GiCardRandom } from "react-icons/gi";
+import { BsPersonVcardFill, BsInfoLg } from "react-icons/bs";
 
 export default function Nav(props) {
   const { onSearch, characters } = props;
@@ -28,19 +31,25 @@ export default function Nav(props) {
   };
 
   return (
-    <div className="nav">
-      <SearchBar onSearch={onSearch} />
-      <button className="add-button" onClick={getRandomCharacter}>
-        Random
+    <div className={styles.nav}>
+      {/* <img src="https://logos-world.net/wp-content/uploads/2022/01/Rick-And-Morty-Logo.png" alt="logo" className={styles.logoImage}/> */}
+      <Link to={"/home"}>
+        <button className={styles.homeButton}>
+          <FaTachometerAlt style={{fontSize:'50px'}} /> Home
+        </button>
+      </Link>
+      <button className={styles.addButton} onClick={getRandomCharacter}>
+        <GiCardRandom style={{fontSize:'50px'}} /> Random
       </button>
-      < Link to={'/'}>
-      <button >Home</button>
+      {/* < Link to={'/home'}></Link> */}
+      <Link to={"/about"}>
+        <button className={styles.button}>
+          <BsInfoLg style={{fontSize:'50px'}}/> About
+        </button>
       </Link>
-      < Link to={'/about'}>
-      <button >About</button>
-      </Link>
+      <div>
+        <SearchBar onSearch={onSearch} />
+      </div>
     </div>
   );
 }
-
-
