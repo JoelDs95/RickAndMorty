@@ -1,19 +1,19 @@
 import React, { useState } from "react";
-import styles from "./Form.module.css";
+import styles from "./LoginForm.module.css";
 import { Link } from 'react-router-dom';
-import Register from "./Register"; 
 import { validate } from "./validate"; 
 
-export default function Login() {
-  const [showLogin, setShowLogin] = useState(true);
-  const toggleForm = () => {
-    setShowLogin(!showLogin);
-  };
+export default function LoginForm() {
+  // const [showLogin, setShowLogin] = useState(true);
+  // const toggleForm = () => {
+  //   setShowLogin(!showLogin);
+  // };
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
   const [errors, setErrors] = useState({});
+  
 
   const handleChange = (event) => {
     setFormData({
@@ -44,7 +44,7 @@ export default function Login() {
 
   return (
     <div className={styles.formContainer}>
-      {showLogin ? (
+      {/* {showLogin ? ( */}
       <form className={styles.form} onSubmit={handleSubmit}>
         <img
           src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif"
@@ -74,14 +74,14 @@ export default function Login() {
           <button type="submit">Iniciar Sesión</button>
         </Link>
       </form>
-      ) : (
+      {/* ) : (
         // Mostrar formulario de registro
         <Register />
-      )}
-      <div className={styles.toggleButtons}>
+      )} */}
+      {/* <div className={styles.toggleButtons}>
         <button onClick={toggleForm}>Login</button>
         <button onClick={toggleForm}>Register</button>
-      </div>
+      </div> */}
     </div>
   );
 }

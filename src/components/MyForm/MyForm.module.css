@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta la altura para centrar verticalmente los botones */
+}
+  
+.myButton {
+    background-color: #1abfca;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 20px; /* Ajusta la distancia superior para separar el botón de los botones anteriores */
+    /* Otros estilos según tus preferencias */
+  }
+  
+  /* Estilos para el botón secundario (si lo tienes) */
+  .myButton:hover {
+    background-color: #0fbe58;
+  }
+  .myBackButton {
+    background-color: #1abfca;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Ajusta la distancia superior para separar el botón de los botones anteriores */
+    /* Otros estilos según tus preferencias */
+  }
+  .myBackButton:hover {
+    background-color: #0fbe58;
+  }

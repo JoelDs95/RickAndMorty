@@ -41,7 +41,7 @@ export default function SearchBar({ onSearch }) {
         onBlur={handleInputBlur}
       />
       <button className={styles.btn} onClick={handleAddtChange}>
-      <MdPersonAddAlt1 style={{ color: '#f5f5f5', transform: 'rotate(-360deg)', width: '35px', }}/>
+      <MdPersonAddAlt1 style={{ color: '#f5f5f5', transform: 'rotate(-360deg)', marginBottom: '5px',}}/>
       </button>
     </div>
   );

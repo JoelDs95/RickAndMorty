@@ -1,9 +1,10 @@
 .formContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: rgba(0, 0, 255, 0.2); Fondo azul translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh; /* Cambiamos 'height' a 'min-height' para asegurar que el fondo abarque toda la pantalla */
+  background-color: rgba(0, 0, 0, 0.932); /* Fondo negro translúcido */
+  border-radius: 30px;
   }
   .form {
     max-width: 600px;
@@ -12,7 +13,6 @@
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.897);
     text-align: center;
   }
   

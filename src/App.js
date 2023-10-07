@@ -6,7 +6,7 @@ import Cards from "./components/Cards/Cards.jsx";
 import Nav from "./components/Nav/Nav";
 import About from "./components/About/About.jsx";
 import Details from "./components/Details/Details.jsx";
-import Form from "./components/Form/Form";
+import MyForm from "./components/MyForm/MyForm";
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -60,7 +60,7 @@ function App() {
         {location.pathname !== "/" && <Nav onSearch={onSearch} characters={characters} />}
         {/* <Cards characters={characters} onClose={onClose} /> */}
         <Routes >
-          <Route path='/' element={<Form />} />
+          <Route path='/' element={<MyForm />} />
           <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
           <Route path='/about' element={<About />} />
           <Route path='/details/:id' element={<Details />} />

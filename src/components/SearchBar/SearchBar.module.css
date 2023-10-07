@@ -3,7 +3,7 @@
 	justify-content: center;
 	align-items: center;
 	margin-bottom: 20px;
-	margin-left: 2100px;
+	
 }
 
 /* Estilos para el input */
@@ -14,22 +14,23 @@
 	top: 45%;
 	transform: translate(-50%, -50%);
 	padding: 8px;
-	margin-left: 1340px;
+	margin-left: 840px;
 }
 
 input {
 	outline: none;
 	box-sizing: border-box;
-	height: 55px;
+	height: 45px;
 	width: 0px;
 	padding: 0 20px;
 	background-color: #1a1919;
 	color: #8dd1dd;
 	border-radius: 50px;
-	font-size: 25px;
+	font-size: 15px;
 	border: 3px solid #63b421;
 	transition: all .7s ease;
 	box-shadow: 0 0 10px rgba(105, 197, 29, 0.7);
+	margin-top: 10px;
 }
 
 ::placeholder {
@@ -41,8 +42,8 @@ input {
 	position: absolute;
 	right: 0px;
 	top: 0px;
-	width: 65px;
-	height: 65px;
+	width: 50px;
+	height: 50px;
 	background: #63b421;
 	line-height: 50px;
 	border-radius: 50%;
@@ -50,6 +51,11 @@ input {
 	cursor: pointer;
 	transition: .5s;
 	box-shadow: 0 0 10px rgba(105, 197, 29, 0.7);
+	border: none;
+	font-size: 30px;
+  	padding: 10px 15px;
+	margin-top: 15px;
+	margin-right: 8px;
 }
 
 .container:hover input {

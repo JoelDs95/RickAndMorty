@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import styles from "./Form.module.css";
-import { validate } from "./validate";
-
+import styles from "./RegisterForm.module.css";
+import { validate } from "../LoginForm/validate";
 export default function Register() {
   const [formData, setFormData] = useState({
     // Define los campos necesarios para el formulario de registro

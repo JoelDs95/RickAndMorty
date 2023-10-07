@@ -11,6 +11,7 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 50px;
   }
 
 .addButton {
@@ -21,7 +22,7 @@
   cursor: pointer;
   text-decoration:none;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 20px;
   transition: 0.3s;
   font-family: 'Open Sans', sans-serif;
 }
@@ -38,7 +39,7 @@ button.homeButton {
   padding: 10px 15px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   transition: 0.3s;
   margin-right: auto;
   font-family: 'Open Sans', sans-serif; /* Empuja el botón Home hacia la izquierda */
@@ -51,7 +52,7 @@ button.homeButton:hover {
 }
 
 /* Style for Home and About buttons */
-button {
+.aboutButton {
   background-color: transparent;
   color: #63b421;
   border: none;
@@ -59,7 +60,7 @@ button {
   cursor: pointer;
   text-decoration: none;
   margin-left: 10px;
-  font-size: 30px;
+  font-size: 20px;
   transition: 0.3s;
   font-family: 'Open Sans', sans-serif;
   
