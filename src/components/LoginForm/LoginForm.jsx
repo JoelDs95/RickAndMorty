@@ -1,32 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LoginForm.module.css";
-import { Link } from 'react-router-dom';
-import { validate } from "./validate"; 
+import { Link } from "react-router-dom";
+import { validate } from "./validate";
 
 export default function LoginForm() {
-  // const [showLogin, setShowLogin] = useState(true);
-  // const toggleForm = () => {
-  //   setShowLogin(!showLogin);
-  // };
   const [formData, setFormData] = useState({
     userName: "",
     password: "",
   });
   const [errors, setErrors] = useState({});
-  
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const handleChange = (event) => {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
+    const { name, value } = event.target;
 
-    const validateErrors = validate({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+    const validateErrors = validate({ [name]: value });
 
-    setErrors(validateErrors);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: validateErrors[name] || "",
+    }));
   };
 
   const handleSubmit = (event) => {
@@ -34,17 +31,23 @@ export default function LoginForm() {
 
     const errorsArray = Object.values(errors);
 
-    if (errorsArray.length === 0) {
-      // Aquí podrías realizar la autenticación o enviar los datos al servidor
+    if (errorsArray.length === 0 && formData.userName && formData.password) {
       alert("Inicio de sesión exitoso");
     } else {
       alert("Por favor, completa todos los campos correctamente");
     }
   };
 
+  useEffect(() => {
+    const validationErrors = validate(formData);
+    setErrors(validationErrors);
+
+    // Habilita el botón si no hay errores de validación
+    setIsButtonDisabled(Object.keys(validationErrors).length > 0);
+  }, [formData]);
+
   return (
     <div className={styles.formContainer}>
-      {/* {showLogin ? ( */}
       <form className={styles.form} onSubmit={handleSubmit}>
         <img
           src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/19643055883023.5996f8afa3a8f.gif"
@@ -59,7 +62,7 @@ export default function LoginForm() {
           value={formData.userName}
           onChange={handleChange}
         />
-        <p className={`${styles.danger} danger`}>{errors.userName}</p>
+        {errors.userName && <div className={`${styles.danger} danger`}>{errors.userName}</div>}
         <label>Contraseña:</label>
         <input
           className={errors.password && styles.warning}
@@ -69,19 +72,13 @@ export default function LoginForm() {
           value={formData.password}
           onChange={handleChange}
         />
-        <p className={`${styles.danger} danger`}>{errors.password}</p>
+        {errors.password && <div className={`${styles.danger} danger`}>{errors.password}</div>}
         <Link to="/home">
-          <button type="submit">Iniciar Sesión</button>
+          <button type="submit" disabled={isButtonDisabled}>
+            Iniciar Sesión
+          </button>
         </Link>
       </form>
-      {/* ) : (
-        // Mostrar formulario de registro
-        <Register />
-      )} */}
-      {/* <div className={styles.toggleButtons}>
-        <button onClick={toggleForm}>Login</button>
-        <button onClick={toggleForm}>Register</button>
-      </div> */}
     </div>
   );
 }

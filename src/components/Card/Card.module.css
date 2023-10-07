@@ -1,8 +1,8 @@
 
 .card {
   margin: 5px;
-  margin-left: 140px; /* Espacio horizontal entre las tarjetas */
-  margin-right: 180px; /* Espacio horizontal entre las tarjetas */
+  margin-left: 70px; /* Espacio horizontal entre las Card */
+  margin-right: 180px; 
   margin-top: 30px; 
   margin-bottom: 95px;
   height: 450px !important;
@@ -13,46 +13,31 @@
   color: #000000;
   position: center;
   transition: transform 0.3s ease, margin 0.4s ease;
-  z-index: 1;
-  
-  /* background-image: url('/home/joel/Escritorio/rick_and_morty/src/components/petro-kosariekov-portal-gun-ri-unscreen (1).gif');
-  background-repeat: no-repeat;
-  background-size: auto 74%; /* Ancho automático y altura fija al 74% */
-  /* background-position: center;
-  background-position-y: 25%; */
-
 }
 .cardInvisible {
-  margin: 170px; /* Define el nuevo margen cuando la tarjeta no es visible */
+  margin: 170px; 
   transition: margin 0.3s ease;
 }
 
 .closeButton {
-  color: #e25e2a;
+  background-color: transparent;
   border: none;
-  border-radius: 40px;
-  padding: 3px;
-  padding: 5px 10px;
   cursor: pointer;
-  top: 10px;
-  right: 10px;
-  transition: background-color 0.3s ease;
 
 }
 
 .card.active {
-  transform: scale(0.95); /* Reducir la escala al 95% */
+  transform: scale(0.95); /* Reducir la escala */
 }
 
 .name {
   font-size: 22px;
   font-weight: bold;
-  color: #20dae0; /* Color fluorescente (puedes ajustar el color) */
+  color: #20dae0; 
   text-shadow: 0 0 5px #27c934ab, 0 0 10px #42a14a, 0 0 15px #259e2d; /* Sombra de texto */
-  transition: 0.5s ease-in-out; /* Animación de sombra de texto */
+  transition: 0.5s ease-in-out; /* Animación de sombra */
   font-family: 'Roboto', sans-serif; 
   align-items: center;
-  /* margin-right: px; */
   max-width: 100%;
   overflow: hidden; 
   text-align: center;
@@ -62,11 +47,11 @@
   margin-left: 25%;
 }
 .rotating {
-  animation: rotar 5s linear infinite; /* Aplica la animación "rotar" a esta clase */
+  animation: rotar 5s linear infinite; /* animación "rotar" */
 }
 
 .name:hover {
-  text-shadow: none; /* Elimina la sombra de texto al pasar el mouse por encima */
+  text-shadow: none; /* Elimina la sombra al pasar el mouse */
 }
 
 .card-transition {
@@ -84,10 +69,10 @@
   position: relative;
   transition: transform 0.3s ease, margin 0.4s ease;
   z-index: 1;
-  align-items: center; /* Centra verticalmente los elementos */
+  align-items: center; 
   background-image: url('/home/joel/Escritorio/rick_and_morty/src/components/petro-kosariekov-portal-gun-ri-unscreen (1).gif');
   background-repeat: no-repeat;
-  background-size: auto 74%; /* Ancho automático y altura fija al 74% */
+  background-size: auto 74%; 
   background-position: center;
   background-position-y: 60%;
 }
@@ -108,8 +93,22 @@
 
 }
 
-/* Define la animación llamada "fadeIn" */
-@keyframes fadeIn {
+.favoriteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.notFavoriteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.card-enter {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn { /* animación "fadeIn" */
   from {
     opacity: 0;
     transform: translateY(10px);
@@ -119,7 +118,7 @@
     transform: translateY(0);
   }
 }
-@keyframes rotar{
+@keyframes rotar{ /* animación "rotar" */
   from{
     transform: rotateY(182deg);
   }
@@ -129,6 +128,3 @@
 }
 
 
-.card-enter {
-  animation: fadeIn 0.5s ease-in-out;
-}

@@ -28,7 +28,6 @@
 }
 .addButton:hover {
   /* background-color: #555; */
-  /* Agrega una línea debajo cuando el cursor está encima */
   border-bottom: 2px solid #63b421;
 }
 
@@ -42,16 +41,14 @@ button.homeButton {
   font-size: 20px;
   transition: 0.3s;
   margin-right: auto;
-  font-family: 'Open Sans', sans-serif; /* Empuja el botón Home hacia la izquierda */
+  font-family: 'Open Sans', sans-serif; 
   /* margin-left: 10px; */
 
 }
 button.homeButton:hover {
-  /* Agrega una línea debajo cuando el cursor está encima */
   border-bottom: 2px solid #63b421;
 }
 
-/* Style for Home and About buttons */
 .aboutButton {
   background-color: transparent;
   color: #63b421;
@@ -65,8 +62,20 @@ button.homeButton:hover {
   font-family: 'Open Sans', sans-serif;
   
 }
+.myFavoriteButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  
+}
 button:hover {
-  /* Agrega una línea debajo cuando el cursor está encima */
   border-bottom: 2px solid #63b421;
 }
 

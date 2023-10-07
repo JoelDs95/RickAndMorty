@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import LoginForm from "../LoginForm/LoginForm"; // Importa el componente del formulario de inicio de sesión
-import Register from "../RegisterForm/Register"; // Importa el componente del formulario de registro
+import LoginForm from "../LoginForm/LoginForm"; 
+import Register from "../RegisterForm/Register"; 
 import styledMyForm from "./MyForm.module.css";
 
 export default function MyForm() {

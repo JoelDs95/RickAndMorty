@@ -7,6 +7,9 @@ import Nav from "./components/Nav/Nav";
 import About from "./components/About/About.jsx";
 import Details from "./components/Details/Details.jsx";
 import MyForm from "./components/MyForm/MyForm";
+import NotFound from "./components/NotFound/NotFound";
+import MyFavorites from "./components/MyFavorites/MyFavorites";
+
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { Routes, Route, useLocation } from 'react-router-dom';
@@ -63,7 +66,9 @@ function App() {
           <Route path='/' element={<MyForm />} />
           <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
           <Route path='/about' element={<About />} />
+          <Route path="/myfavorites" element={<MyFavorites/>}/>
           <Route path='/details/:id' element={<Details />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
       
     </DndProvider >

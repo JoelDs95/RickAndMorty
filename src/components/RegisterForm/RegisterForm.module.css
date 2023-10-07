@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40vh; /* Cambiamos 'height' a 'min-height' para asegurar que el fondo abarque toda la pantalla */
-  background-color: rgba(0, 0, 0, 0.932); /* Fondo negro translúcido */
+  min-height: 40vh; 
+  background-color: rgba(0, 0, 0, 0.932); 
   border-radius: 30px;
   }
   .form {
@@ -17,10 +17,10 @@
   }
   
   .form img {
-    max-width: 100%; /* Asegura que la imagen ocupe todo el ancho del formulario */
-    max-height: 300px; /* Ajusta la altura máxima de la imagen según tus necesidades */
-    margin-bottom: 20px; /* Espacio entre la imagen y los otros elementos */
-    border-radius: 10px; /* Agrega un borde redondeado a la imagen */
+    max-width: 100%; 
+    max-height: 300px; 
+    margin-bottom: 20px;
+    border-radius: 10px;
     opacity: 0.8;
   }
   
@@ -36,14 +36,14 @@
     width: 80%;
     padding: 18px;
     margin-bottom: 15px;
-    border: 5px solid transparent; /* Borde transparente */
+    border: 5px solid transparent;
     border-radius: 4px;
-    transition: border-color 0.3s; /* Transición de color de borde */
+    transition: border-color 0.3s;
     font-size: 20px;
   }
   
   .form input:focus {
-    border-color: #00ffff; /* Color de borde fluorescente al enfocar */
+    border-color: #00ffff; 
   }
   
   .form .danger {

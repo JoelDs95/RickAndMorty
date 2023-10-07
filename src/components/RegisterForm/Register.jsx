@@ -3,8 +3,6 @@ import styles from "./RegisterForm.module.css";
 import { validate } from "../LoginForm/validate";
 export default function Register() {
   const [formData, setFormData] = useState({
-    // Define los campos necesarios para el formulario de registro
-    // Ejemplo:
     userName: "",
     email: "",
     password: "",
@@ -31,7 +29,6 @@ export default function Register() {
     const errorsArray = Object.values(errors);
 
     if (errorsArray.length === 0) {
-      // Aquí podrías realizar el registro o enviar los datos al servidor
       alert("Registro exitoso");
     } else {
       alert("Por favor, completa todos los campos correctamente");
@@ -41,8 +38,6 @@ export default function Register() {
   return (
     <div className={styles.formContainer}>
       <form className={styles.form} onSubmit={handleSubmit}>
-        {/* Campos de registro */}
-        {/* Ejemplo: */}
         <label>Nombre de usuario:</label>
         <input
           className={errors.userName && styles.warning}
@@ -52,8 +47,6 @@ export default function Register() {
           value={formData.userName}
           onChange={handleChange}
         />
-        {/* Otros campos de registro */}
-        {/* Ejemplo: */}
         <label>Correo electrónico:</label>
         <input
           className={errors.email && styles.warning}
@@ -63,8 +56,7 @@ export default function Register() {
           value={formData.email}
           onChange={handleChange}
         />
-        {/* Más campos de registro */}
-        {/* Ejemplo: */}
+       
         <label>Contraseña:</label>
         <input
           className={errors.password && styles.warning}
@@ -74,8 +66,7 @@ export default function Register() {
           value={formData.password}
           onChange={handleChange}
         />
-        {/* Más campos de registro */}
-        {/* Ejemplo: */}
+        
         <label>Confirmar Contraseña:</label>
         <input
           className={errors.confirmPassword && styles.warning}
