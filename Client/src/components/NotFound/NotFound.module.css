@@ -1,0 +1,27 @@
+.notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    text-align: center;
+    font-family: 'Nombre de tu fuente', sans-serif; 
+  }
+  
+  .notFoundTitle {
+    font-size: 55px;
+    color: #20dae0;
+    text-shadow: 0 0 5px #27c934ab, 0 0 10px #42a14a, 0 0 15px #259e2d; 
+    transition: 0.5s ease-in-out; 
+    font-family: 'Roboto', sans-serif; 
+    align-items: center;
+  }
+  
+  .notFoundMessage {
+    color: #20dae0; 
+    text-shadow: 0 0 5px #27c934ab, 0 0 10px #42a14a, 0 0 15px #259e2d; 
+    transition: 0.5s ease-in-out;
+    font-family: 'Roboto', sans-serif; 
+    align-items: center;
+    font-size: 40px;
+  }

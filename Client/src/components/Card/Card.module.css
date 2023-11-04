@@ -1,0 +1,130 @@
+
+.card {
+  margin: 5px;
+  margin-left: 70px; /* Espacio horizontal entre las Card */
+  margin-right: 180px; 
+  margin-top: 30px; 
+  margin-bottom: 95px;
+  height: 450px !important;
+  width: 300px !important;
+  display: flex;
+  border-radius: 10px;
+  padding: 30px;
+  color: #000000;
+  position: center;
+  transition: transform 0.3s ease, margin 0.4s ease;
+}
+.cardInvisible {
+  margin: 170px; 
+  transition: margin 0.3s ease;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.card.active {
+  transform: scale(0.95); /* Reducir la escala */
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #20dae0; 
+  text-shadow: 0 0 5px #27c934ab, 0 0 10px #42a14a, 0 0 15px #259e2d; /* Sombra de texto */
+  transition: 0.5s ease-in-out; /* Animación de sombra */
+  font-family: 'Roboto', sans-serif; 
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden; 
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  display: flex; 
+  margin-left: 25%;
+}
+.rotating {
+  animation: rotar 5s linear infinite; /* animación "rotar" */
+}
+
+.name:hover {
+  text-shadow: none; /* Elimina la sombra al pasar el mouse */
+}
+
+.card-transition {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.divContainer {
+  margin: 5x;
+  height: 450px !important;
+  width: 300px !important;
+  display: flex;
+  border-radius: 10px;
+  padding: 30px;
+  color: #000000;
+  position: relative;
+  transition: transform 0.3s ease, margin 0.4s ease;
+  z-index: 1;
+  align-items: center; 
+  background-image: url('/home/joel/Escritorio/rick_and_morty/Client/src/components/petro-kosariekov-portal-gun-ri-unscreen (1).gif');
+  background-repeat: no-repeat;
+  background-size: auto 74%; 
+  background-position: center;
+  background-position-y: 60%;
+}
+
+
+.image {
+  max-width: 100%;
+  flex-wrap: wrap;
+  height: auto;
+  margin-top: 50px;
+  border-radius: 150px;
+  border: 1px solid #c7ee8000;
+  opacity: 0.85;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  /* image-rendering: #ec2525; */
+
+}
+
+.favoriteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.notFavoriteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.card-enter {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn { /* animación "fadeIn" */
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotar{ /* animación "rotar" */
+  from{
+    transform: rotateY(182deg);
+  }
+  to{
+    transform: rotateY(-180deg);
+  }
+}
+
+

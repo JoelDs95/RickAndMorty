@@ -1,0 +1,89 @@
+.nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 50px;
+  }
+
+.addButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration:none;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+}
+.addButton:hover {
+  /* background-color: #555; */
+  border-bottom: 2px solid #63b421;
+}
+
+button.homeButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+  margin-right: auto;
+  font-family: 'Open Sans', sans-serif; 
+  /* margin-left: 10px; */
+
+}
+button.homeButton:hover {
+  border-bottom: 2px solid #63b421;
+}
+
+.aboutButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+.myFavoriteButton {
+  background-color: transparent;
+  color: #63b421;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+button:hover {
+  border-bottom: 2px solid #63b421;
+}
+
+
+.logoImage {
+  width: 400px;
+  height: 150px;
+  margin-block-start: -30px;
+  position: left !important;
+  /* margin-bottom:  500; */
+}
